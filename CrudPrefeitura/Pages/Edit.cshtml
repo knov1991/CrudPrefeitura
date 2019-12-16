@@ -1,0 +1,42 @@
+﻿@page
+@model CrudPrefeitura.EditModel
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+
+    <h3>Editar Livro</h3>
+    <form method="post" asp-page="edit">
+        <table cellpadding="2" cellspacing="2">
+            <tr>
+                <td>ID</td>
+                <td><input asp-for="product.ID" readonly="readonly" /></td>
+            </tr>
+            <tr>
+                <td>Nome</td>
+                <td><input asp-for="product.Nome" /></td>
+            </tr>
+            <tr>
+                <td>Preço R$</td>
+                <td><input type="number" min="0" max="1000" asp-for="product.Preço" /></td>
+            </tr>
+            <tr>
+                <td>Tipo</td>
+                <td><input asp-for="product.Tipo" /></td>
+            </tr>
+            <tr>
+                <td>Autor</td>
+                <td><input asp-for="product.Autor" /></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="Save" /></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>

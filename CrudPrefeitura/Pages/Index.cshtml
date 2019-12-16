@@ -1,0 +1,40 @@
+﻿@page
+@model CrudPrefeitura.IndexModel
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    <h3>Lista de Livros</h3>
+    <a asp-page="add">Adicionar Livro</a>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Tipo</th>
+            <th>Autor</th>
+        </tr>
+        @foreach(var product in Model.Products)
+        {
+    <tr>
+        <td>@product.ID</td>
+        <td>@product.Nome</td>
+        <td class="value">R$ @product.Preço</td>
+        <td>@product.Tipo</td>
+        <td>@product.Autor</td>
+        <td>
+            <a class="fa fa-edit" asp-page="edit" asp-route-id="@product.ID"> Editar</a>
+            |
+            <a class="fa fa-trash" Lixo asp-page="index" asp-page-handler="Delete" asp-route-id="@product.ID" onclick="return confirm('Você quer remover o livro (@product.Nome)?')"> Deletar</a>
+        </td>
+    </tr>
+        }
+    </table>
+
+</body>
+</html>

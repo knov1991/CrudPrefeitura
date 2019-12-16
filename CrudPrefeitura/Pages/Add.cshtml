@@ -1,0 +1,38 @@
+﻿@page
+@model CrudPrefeitura.AddModel
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+</head>
+<body>
+
+    <h3>Adicionar Livro</h3>
+    <form method="post" asp-page="add">
+        <table cellpadding="2" cellspacing="2">
+            <tr>
+                <td>Nome</td>
+                <td><input asp-for="product.Nome" /></td>
+            </tr>
+            <tr>
+                <td>Preço R$</td>
+                <td><input type="number" value="0" min="0" max="1000" asp-for="product.Preço" /></td>
+            </tr>
+            <tr>
+                <td>Tipo</td>
+                <td><input asp-for="product.Tipo" /></td>
+            </tr>
+            <tr>
+                <td>Autor</td>
+                <td><input asp-for="product.Autor" /></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="Save" /></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
