@@ -13,7 +13,6 @@
     <a asp-page="add">Adicionar Livro</a>
     <table border="1">
         <tr>
-            <th>ID</th>
             <th>Nome</th>
             <th>Preço</th>
             <th>Tipo</th>
@@ -22,7 +21,6 @@
         @foreach(var product in Model.Products)
         {
     <tr>
-        <td>@product.ID</td>
         <td>@product.Nome</td>
         <td class="value">R$ @product.Preço</td>
         <td>@product.Tipo</td>
